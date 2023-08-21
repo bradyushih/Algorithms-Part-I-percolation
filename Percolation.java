@@ -116,39 +116,39 @@ public class Percolation {
         StdOut.println("size: " + size);
         StdOut.println("matrixSize: " + matrixSize);
         System.out.println(size);
-        p.open(1, 6);
-        p.open(2, 6);
-        p.open(3, 6);
-        p.open(4, 6);
-        p.open(5, 6);
-        p.open(5, 5);
-        p.open(4, 4);
-        p.open(3, 4);
-        p.open(2, 4);
-        p.open(2, 3);
-        p.open(2, 2);
-        p.open(2, 1);
-        p.open(3, 1);
-        p.open(4, 1);
-        p.open(5, 1);
-        p.open(5, 2);
-        p.open(6, 2);
-        p.open(5, 4);
+        // p.open(1, 6);
+        // p.open(2, 6);
+        // p.open(3, 6);
+        // p.open(4, 6);
+        // p.open(5, 6);
+        // p.open(5, 5);
+        // p.open(4, 4);
+        // p.open(3, 4);
+        // p.open(2, 4);
+        // p.open(2, 3);
+        // p.open(2, 2);
+        // p.open(2, 1);
+        // p.open(3, 1);
+        // p.open(4, 1);
+        // p.open(5, 1);
+        // p.open(5, 2);
+        // p.open(6, 2);
+        // p.open(5, 4);
 
         // int sites = 38;
         // int checkRow = 3;
         // int checkCol = 9;
-        // while (/*sites > 0 || */!StdIn.isEmpty()) {
-        //     // int openSite = StdRandom.uniformInt(1, size * size + 1);
-        //     // int row = openSite % size == 0 ? openSite / size : openSite / size + 1;
-        //     // int col = openSite % size == 0 ? size : openSite % size;
-        //     int row = StdIn.readInt();
-        //     int col = StdIn.readInt();
-        //     System.out.println("open:" + row + ", " + col);
-        //     p.open(row, col);
-        //     if (p.percolates()) break;
-        //     // sites--;
-        // }
+        while (/*sites > 0 || */!StdIn.isEmpty()) {
+            // int openSite = StdRandom.uniformInt(1, size * size + 1);
+            // int row = openSite % size == 0 ? openSite / size : openSite / size + 1;
+            // int col = openSite % size == 0 ? size : openSite % size;
+            int row = StdIn.readInt();
+            int col = StdIn.readInt();
+            System.out.println("open:" + row + ", " + col);
+            p.open(row, col);
+            if (p.percolates()) break;
+            // sites--;
+        }
         // System.out.println(p.isFull(checkRow, checkCol));
         System.out.println();
         StdOut.println("percolates: " + p.percolates());

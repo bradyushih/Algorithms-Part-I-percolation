@@ -4,6 +4,7 @@
  *  Last modified:     October 16, 1842
  **************************************************************************** */
 
+import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
@@ -63,15 +64,10 @@ public class PercolationStats {
     // test client (see below)
 
     public static void main(String[] args) {
-        // PercolationStats ps = new PercolationStats(Integer.parseInt(args[0]),
-        //                                            Integer.parseInt(args[1]));
-        PercolationStats ps = new PercolationStats(20,
-                                                   10);
+        PercolationStats ps = new PercolationStats(StdIn.readInt(),
+                                                   StdIn.readInt());
 
         StdOut.println("mean = " + ps.mean());
-        StdOut.println("stddev = " + ps.stddev());
-        StdOut.println(
-                "95% confidence interval = [" + ps.confidenceLo() + ", " + ps.confidenceHi() + "]");
         StdOut.println("stddev = " + ps.stddev());
         StdOut.println(
                 "95% confidence interval = [" + ps.confidenceLo() + ", " + ps.confidenceHi() + "]");
